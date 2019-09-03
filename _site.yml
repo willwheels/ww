@@ -1,0 +1,12 @@
+name: "ww_distill"
+title: "Will's 'Academic' Website"
+description: |
+  Will's 'Academic' Website
+output_dir: "docs"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+output: distill::distill_article
