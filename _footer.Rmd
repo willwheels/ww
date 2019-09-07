@@ -1,0 +1,9 @@
+---
+title: "footer"
+author: "Will Wheeler"
+date: "September 6, 2019"
+output: html_document
+---
+© Copyright 2018 William J. Wheeler
+
+Site built using [Distill for R Markdown](https://rstudio.github.io/distill/)
