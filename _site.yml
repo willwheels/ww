@@ -10,6 +10,8 @@ creative_commons: CC BY
 google_analytics: "UA-147248436-1"
 twitter:
   site: "@wilwheels"
+  
+include: ["_redirects.html"]
 
 navbar:
   right:
