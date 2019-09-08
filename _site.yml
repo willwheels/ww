@@ -14,9 +14,21 @@ twitter:
 include: ["_redirects.html"]
 
 navbar:
+  logo:
+    image: images/logo.png
+    href: https://www.rstudio.com
   right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Research"
+      menu:
+        - text: "Publications"
+          href: publications.html
+        - text: "Work in Progress"
+          href: work_in_progress.html
+    - text: "CV"
+      href: cv.html
+    - icon: fab fa-github
+      href: https://willwheels.github.com/
+      
 output: distill::distill_article
+      
+
