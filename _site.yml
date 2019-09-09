@@ -26,6 +26,8 @@ navbar:
           href: work_in_progress.html
     - text: "CV"
       href: cv.html
+    - text: "Blog"
+      href: blog_posts.html
     - icon: fab fa-github
       href: https://willwheels.github.com/
       
