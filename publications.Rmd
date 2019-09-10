@@ -1,12 +1,11 @@
 ---
-title: "publications"
-author: "Will Wheeler"
-date: "9/7/2019"
-output: html_document
+title: "Publications"
+
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
 
 This will be my publications
