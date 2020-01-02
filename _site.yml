@@ -3,20 +3,20 @@ title: "Will's 'Academic' Website"
 description: "A pseudo-academic site for research and blogging"
 output_dir: "docs"
 
-favicon: images/favicon.png
+favicon: images/favicon.ico
 base_url: https://https://willwheels.rbind.io/
 repository_url: https://github.com/willwheels/ww
 creative_commons: CC BY
 google_analytics: "UA-147248436-1"
 twitter:
-  site: "@wilwheels"
+  site: "@willwheels"
   
 include: ["_redirects.html"]
 
 navbar:
   logo:
-    image: images/logo.png
-    href: https://www.rstudio.com
+    image: images/favicon.ico
+    href: https://willwheels.rbind.io/
   right:
     - text: "Research"
       menu:
@@ -28,8 +28,10 @@ navbar:
       href: cv.html
     - text: "Blog"
       href: blog_posts.html
+    - icon: fab fa-twitter
+      href: https://twitter.com/willwheels
     - icon: fab fa-github
-      href: https://willwheels.github.com/
+      href: https://willwheels.github.io/
       
 output: distill::distill_article
       

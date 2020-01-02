@@ -1,7 +1,8 @@
 ---
 title: "Will's 'Academic' Website"
 description: |
-  Welcome to the website. I hope you enjoy it!
+
+
 site: distill::distill_website
 ---
 
@@ -16,3 +17,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+Greetings. I am an environmental economist at the U.S. EPA's [National Center for Environmental Economics.](https://www.epa.gov/environmental-economics) I mostly support efforts (and thus conduct research regarding) water quality and enforcement issues. I am quite interested in the quality of EPA's environmental data and do my best to help people understand our data sets. I also study the potential for gaming of environmental data. We do not maintain personal websites at work, so this is what I am creating instead.
+  
+I am an occasional blogger at John Whitehead and Tim Haab's [Environmental Economics](www.env-econ.net) but I intend to blog on this space using Distill and Rmarkdown to show examples of the kind of work I do.
