@@ -32,6 +32,8 @@ navbar:
       href: https://twitter.com/willwheels
     - icon: fab fa-github
       href: https://willwheels.github.io/
+    - icon: fab fa-envelope
+      href: mailto:wheeler.william@epa.gov
       
 output: distill::distill_article
       
