@@ -8,3 +8,5 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 My current CV is [here](https://github.com/willwheels/R-vitae/blob/master/wheeler-cv.pdf)
+
+My CV is written in Rmarkdown and generated using a slightly modified version of a LaTex template created by [Ryan Peek](https://d-rug.github.io/blog/2017/Ryan-Peek-on-creating-a-CV-using-Rmarkdown), which is in turn based on a template by [Steven Miller].(http://svmiller.com/blog/2016/03/svm-r-markdown-cv/)
