@@ -1,11 +1,10 @@
 ---
 title: "CV"
 
-output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-I'll provide a link to my CV here
+My current CV is [here](https://github.com/willwheels/R-vitae/blob/master/wheeler-cv.pdf)
