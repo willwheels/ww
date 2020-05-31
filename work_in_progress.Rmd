@@ -1,7 +1,6 @@
 ---
 title: "Ongoing Research"
 
-output: html_document
 ---
 
 ```{r setup, include=FALSE}
