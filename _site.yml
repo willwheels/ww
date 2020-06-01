@@ -35,6 +35,8 @@ navbar:
     - icon: fa-envelope
       href: mailto:wheeler.william@epa.gov
       
-output: distill::distill_article
+output: 
+  distill::distill_article:
+    css: styles.css
       
 
