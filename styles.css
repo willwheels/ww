@@ -4,3 +4,7 @@
   font-size: 15px;
   font-weight: 300;
 }
+
+.distill-site-header {
+    position: fixed;
+}
