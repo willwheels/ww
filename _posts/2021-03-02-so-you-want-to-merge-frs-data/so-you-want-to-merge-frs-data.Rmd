@@ -1,15 +1,16 @@
 ---
-title: "So You Want to Merge EPA Data Using the Federal Registry Service?"
+title: "So You Want to Merge FRS Data?"
 description: |
   A quick blog post to describe merging ECHO data with FRS data.
 author:
   - name: Will Wheeler
     url: http://willwheels.rbind.io/
-    affiliation: U.S. EPA
-date: "`r Sys.Date()`"
+date: 03-02-2021
 twitter:
   creator: "@willwheels"
-output: distill::distill_article
+output:
+  distill::distill_article:
+    self_contained: false
 ---
 
 ```{r setup, include=FALSE}
