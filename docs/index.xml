@@ -3,7 +3,7 @@
   <channel>
     <title>Will's 'Academic' Website</title>
     <link>https://https://willwheels.rbind.io/</link>
-    <atom:link href="https://https://willwheels.rbind.io/blog_posts.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://https://willwheels.rbind.io/index.xml" rel="self" type="application/rss+xml"/>
     <description>A pseudo-academic site for research and blogging</description>
     <image>
       <title>Will's 'Academic' Website</title>

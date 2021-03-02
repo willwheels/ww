@@ -2,7 +2,7 @@
 title: "Will's 'Academic' Website"
 description: |
 
-
+listing: posts
 site: distill::distill_website
 ---
 

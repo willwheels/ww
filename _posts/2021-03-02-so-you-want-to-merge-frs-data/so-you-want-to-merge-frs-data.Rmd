@@ -8,6 +8,7 @@ author:
 date: 03-02-2021
 twitter:
   creator: "@willwheels"
+canonical_url: http://willwheels.rbind.io/posts/
 output:
   distill::distill_article:
     self_contained: false

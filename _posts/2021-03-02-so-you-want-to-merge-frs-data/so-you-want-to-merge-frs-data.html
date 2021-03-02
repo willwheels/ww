@@ -19,372 +19,43 @@
  <!--/radix_placeholder_import_source-->
 
   <!--radix_placeholder_meta_tags-->
-  <title>Will's 'Academic' Website: About this site</title>
+  <title>So You Want to Merge FRS Data?</title>
 
-  <meta property="description" itemprop="description" content="Some additional details about the website"/>
+  <meta property="description" itemprop="description" content="A quick blog post to describe merging ECHO data with FRS data."/>
 
-  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
-  <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.ico"/>
+  <link rel="canonical" href="http://willwheels.rbind.io/posts/"/>
 
+  <!--  https://schema.org/Article -->
+  <meta property="article:published" itemprop="datePublished" content="2021-03-02"/>
+  <meta property="article:created" itemprop="dateCreated" content="2021-03-02"/>
+  <meta name="article:author" content="Will Wheeler"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Will&#39;s &#39;Academic&#39; Website: About this site"/>
+  <meta property="og:title" content="So You Want to Merge FRS Data?"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Some additional details about the website"/>
+  <meta property="og:description" content="A quick blog post to describe merging ECHO data with FRS data."/>
+  <meta property="og:url" content="http://willwheels.rbind.io/posts/"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="Will&#39;s &#39;Academic&#39; Website"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Will&#39;s &#39;Academic&#39; Website: About this site"/>
-  <meta property="twitter:description" content="Some additional details about the website"/>
-  <meta property="twitter:site" content="@willwheels"/>
+  <meta property="twitter:title" content="So You Want to Merge FRS Data?"/>
+  <meta property="twitter:description" content="A quick blog post to describe merging ECHO data with FRS data."/>
+  <meta property="twitter:url" content="http://willwheels.rbind.io/posts/"/>
+  <meta property="twitter:creator" content="@willwheels"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["About this site"]},{"type":"character","attributes":{},"value":["Some additional details about the website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","twitter","canonical_url","output"]}},"value":[{"type":"character","attributes":{},"value":["So You Want to Merge FRS Data?"]},{"type":"character","attributes":{},"value":["A quick blog post to describe merging ECHO data with FRS data.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Will Wheeler"]},{"type":"character","attributes":{},"value":["http://willwheels.rbind.io/"]}]}]},{"type":"character","attributes":{},"value":["03-02-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["creator"]}},"value":[{"type":"character","attributes":{},"value":["@willwheels"]}]},{"type":"character","attributes":{},"value":["http://willwheels.rbind.io/posts/"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
-  <!--radix_placeholder_navigation_in_header-->
-
-  <script type="application/javascript">
-
-    window.headroom_prevent_pin = false;
-
-    window.document.addEventListener("DOMContentLoaded", function (event) {
-
-      // initialize headroom for banner
-      var header = $('header').get(0);
-      var headerHeight = header.offsetHeight;
-      var headroom = new Headroom(header, {
-        onPin : function() {
-          if (window.headroom_prevent_pin) {
-            window.headroom_prevent_pin = false;
-            headroom.unpin();
-          }
-        }
-      });
-      headroom.init();
-      if(window.location.hash)
-        headroom.unpin();
-      $(header).addClass('headroom--transition');
-
-      // offset scroll location for banner on hash change
-      // (see: https://github.com/WickyNilliams/headroom.js/issues/38)
-      window.addEventListener("hashchange", function(event) {
-        window.scrollTo(0, window.pageYOffset - (headerHeight + 25));
-      });
-
-      // responsive menu
-      $('.distill-site-header').each(function(i, val) {
-        var topnav = $(this);
-        var toggle = topnav.find('.nav-toggle');
-        toggle.on('click', function() {
-          topnav.toggleClass('responsive');
-        });
-      });
-
-      // nav dropdowns
-      $('.nav-dropbtn').click(function(e) {
-        $(this).next('.nav-dropdown-content').toggleClass('nav-dropdown-active');
-        $(this).parent().siblings('.nav-dropdown')
-           .children('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $("body").click(function(e){
-        $('.nav-dropdown-content').removeClass('nav-dropdown-active');
-      });
-      $(".nav-dropdown").click(function(e){
-        e.stopPropagation();
-      });
-    });
+  
+  <script type="text/json" id="radix-resource-manifest">
+  {"type":"character","attributes":{},"value":["so-you-want-to-merge-frs-data_files/bowser-1.9.3/bowser.min.js","so-you-want-to-merge-frs-data_files/distill-2.2.21/template.v2.js","so-you-want-to-merge-frs-data_files/figure-html5/tweet-from-ashley-1.png","so-you-want-to-merge-frs-data_files/header-attrs-2.3/header-attrs.js","so-you-want-to-merge-frs-data_files/jquery-1.11.3/jquery.min.js","so-you-want-to-merge-frs-data_files/webcomponents-2.0.0/webcomponents.js","TX_ENVIRONMENTAL_INTEREST_FILE.CSV"]}
   </script>
-
-  <style type="text/css">
-
-  /* Theme (user-documented overrideables for nav appearance) */
-
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #455a64;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
-  .distill-site-nav a {
-    color: inherit;
-    text-decoration: none;
-  }
-
-  .distill-site-nav a:hover {
-    color: white;
-  }
-
-  @media print {
-    .distill-site-nav {
-      display: none;
-    }
-  }
-
-  .distill-site-header {
-
-  }
-
-  .distill-site-footer {
-
-  }
-
-
-  /* Site Header */
-
-  .distill-site-header {
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-  }
-
-  .distill-site-header .nav-left {
-    display: inline-block;
-    margin-left: 8px;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header .nav-left {
-      margin-left: 0;
-    }
-  }
-
-
-  .distill-site-header .nav-right {
-    float: right;
-    margin-right: 8px;
-  }
-
-  .distill-site-header a,
-  .distill-site-header .title {
-    display: inline-block;
-    text-align: center;
-    padding: 14px 10px 14px 10px;
-  }
-
-  .distill-site-header .title {
-    font-size: 18px;
-  }
-
-  .distill-site-header .logo {
-    padding: 0;
-  }
-
-  .distill-site-header .logo img {
-    display: none;
-    max-height: 20px;
-    width: auto;
-    margin-bottom: -4px;
-  }
-
-  .distill-site-header .nav-image img {
-    max-height: 18px;
-    width: auto;
-    display: inline-block;
-    margin-bottom: -3px;
-  }
-
-
-
-  @media screen and (min-width: 1000px) {
-    .distill-site-header .logo img {
-      display: inline-block;
-    }
-    .distill-site-header .nav-left {
-      margin-left: 20px;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 20px;
-    }
-    .distill-site-header .title {
-      padding-left: 12px;
-    }
-  }
-
-
-  .distill-site-header .nav-toggle {
-    display: none;
-  }
-
-  .nav-dropdown {
-    display: inline-block;
-    position: relative;
-  }
-
-  .nav-dropdown .nav-dropbtn {
-    border: none;
-    outline: none;
-    color: rgba(255, 255, 255, 0.8);
-    padding: 16px 10px;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-    margin: 0;
-    margin-top: 1px;
-    z-index: 2;
-  }
-
-  .nav-dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 200px;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 4px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1;
-    margin-top: 2px;
-    white-space: nowrap;
-    padding-top: 4px;
-    padding-bottom: 4px;
-  }
-
-  .nav-dropdown-content hr {
-    margin-top: 4px;
-    margin-bottom: 4px;
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  .nav-dropdown-active {
-    display: block;
-  }
-
-  .nav-dropdown-content a, .nav-dropdown-content .nav-dropdown-header {
-    color: black;
-    padding: 6px 24px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-
-  .nav-dropdown-content .nav-dropdown-header {
-    display: block;
-    padding: 5px 24px;
-    padding-bottom: 0;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #999999;
-    white-space: nowrap;
-  }
-
-  .nav-dropdown:hover .nav-dropbtn {
-    color: white;
-  }
-
-  .nav-dropdown-content a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-
-  .nav-right .nav-dropdown-content {
-    margin-left: -45%;
-    right: 0;
-  }
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header a, .distill-site-header .nav-dropdown  {display: none;}
-    .distill-site-header a.nav-toggle {
-      float: right;
-      display: block;
-    }
-    .distill-site-header .title {
-      margin-left: 0;
-    }
-    .distill-site-header .nav-right {
-      margin-right: 0;
-    }
-    .distill-site-header {
-      overflow: hidden;
-    }
-    .nav-right .nav-dropdown-content {
-      margin-left: 0;
-    }
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .distill-site-header.responsive {position: relative;}
-    .distill-site-header.responsive a.nav-toggle {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .distill-site-header.responsive a,
-    .distill-site-header.responsive .nav-dropdown {
-      display: block;
-      text-align: left;
-    }
-    .distill-site-header.responsive .nav-left,
-    .distill-site-header.responsive .nav-right {
-      width: 100%;
-    }
-    .distill-site-header.responsive .nav-dropdown {float: none;}
-    .distill-site-header.responsive .nav-dropdown-content {position: relative;}
-    .distill-site-header.responsive .nav-dropdown .nav-dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-    }
-  }
-
-  /* Site Footer */
-
-  .distill-site-footer {
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    z-index: 3;
-    margin-top: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-  }
-
-  /* Headroom */
-
-  d-title {
-    padding-top: 6rem;
-  }
-
-  @media print {
-    d-title {
-      padding-top: 4rem;
-    }
-  }
-
-  .headroom {
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .headroom--transition {
-    transition: all .4s ease-in-out;
-  }
-
-  .headroom--unpinned {
-    top: -100px;
-  }
-
-  .headroom--pinned {
-    top: 0;
-  }
-
-  </style>
-
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
-  <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
+  <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
 
@@ -1270,36 +941,14 @@
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.3/header-attrs.js"></script>
-  <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
-  <script src="site_libs/bowser-1.9.3/bowser.min.js"></script>
-  <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
-  <script src="site_libs/distill-2.2.21/template.v2.js"></script>
+  <script src="so-you-want-to-merge-frs-data_files/header-attrs-2.3/header-attrs.js"></script>
+  <script src="so-you-want-to-merge-frs-data_files/jquery-1.11.3/jquery.min.js"></script>
+  <script src="so-you-want-to-merge-frs-data_files/bowser-1.9.3/bowser.min.js"></script>
+  <script src="so-you-want-to-merge-frs-data_files/webcomponents-2.0.0/webcomponents.js"></script>
+  <script src="so-you-want-to-merge-frs-data_files/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147248436-1"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'UA-147248436-1');
-  </script>
-  <style type="text/css">
-  .distill-site-nav {
-    color: rgba(255, 255, 255, 0.8);
-    background-color: #0050b8;
-    font-size: 15px;
-    font-weight: 300;
-    position: fixed;
-    top: 0px;
-  }
-
-  .distill-site-header {
-      position: fixed;
-  }
-  </style>
   <!--/radix_placeholder_site_in_header-->
 
-  <link rel="stylesheet" href="styles.css" type="text/css"/>
 
 </head>
 
@@ -1308,58 +957,210 @@
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"About this site","description":"Some additional details about the website","authors":[]}
+{"title":"So You Want to Merge FRS Data?","description":"A quick blog post to describe merging ECHO data with FRS data.","authors":[{"author":"Will Wheeler","authorURL":"http://willwheels.rbind.io/","affiliation":"&nbsp;","affiliationURL":"#"}],"publishedDate":"2021-03-02T00:00:00.000-05:00","citationText":"Wheeler, 2021"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
 <!--radix_placeholder_navigation_before_body-->
-<header class="header header--fixed" role="banner">
-<nav class="distill-site-nav distill-site-header">
-<div class="nav-left">
-<a class="logo" href="https://willwheels.rbind.io/">
-<img src="images/favicon.ico" alt="Logo"/>
-</a>
-<a href="index.html" class="title">Will's 'Academic' Website</a>
-</div>
-<div class="nav-right">
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Research
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="publications.html">Publications</a>
-<a href="work_in_progress.html">Work in Progress</a>
-</div>
-</div>
-<a href="cv.html">CV</a>
-<a href="blog_posts.html">Blog</a>
-<a href="https://twitter.com/willwheels">
-<i class="fab fa-twitter" aria-hidden="true"></i>
-</a>
-<a href="https://github.com/willwheels">
-<i class="fab fa-github" aria-hidden="true"></i>
-</a>
-<a href="mailto:wheeler.william@epa.gov">
-<i class="fa fa-envelope" aria-hidden="true"></i>
-</a>
-<a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
-</div>
-</nav>
-</header>
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>About this site</h1>
-<p><p>Some additional details about the website</p></p>
+<h1>So You Want to Merge FRS Data?</h1>
+<p><p>A quick blog post to describe merging ECHO data with FRS data.</p></p>
 </div>
 
+<div class="d-byline">
+  Will Wheeler <a href="http://willwheels.rbind.io/" class="uri">http://willwheels.rbind.io/</a> 
+  
+<br/>03-02-2021
+</div>
 
 <div class="d-article">
+<p>In the last week, I have received two similar questions about merging data from the <a href="https://echo.epa.gov/tools/data-downloads">EPA ECHO Data Downloads</a>. In this post, I try to answer one of these questions, posed by <a href="https://www.ashleylanger.com/">Ashley Langer</a>:</p>
+<div class="layout-chunk" data-layout="l-body">
+<p><img src="so-you-want-to-merge-frs-data_files/figure-html5/tweet-from-ashley-1.png" width="624" /></p>
+</div>
+<p>CEMS is the <a href="https://www.epa.gov/emc/emc-continuous-emission-monitoring-systems">Continuous Emissions Monitoring System</a> data.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> These continuous monitors are generally used by facilities in air market trading programs, which depend on quite accurate data.</p>
+<p>The other data set is ICIS-Air, housed by ECHO, contains which “emissions, compliance, and enforcement data on stationary sources of air pollution.” This data set focuses on the plant level.</p>
+<p>Both of these data sets have their own facility identifiers, but the CEMS data does not contain a linking identifier (or at least, the data set under discussion does not). Common identifiers are provided by EPA’s <a href="https://www.epa.gov/frs">Facility Registry Service</a>. It’s important to note here that the common identifier may not be one-to-one, based on differing regulatory definitions and what FRS considers to be a facility.</p>
+<p>The ECHO data downloads have an FRS file, so what’s the problem? This is not a complete copy of FRS. As noted in the download summary:</p>
+<blockquote>
+<p>records included in the FRS download file are those with a valid FRS and which are cross-referenced by ID number to data contained in ICIS-Air, TRI, GHG (E-GGRT), RCRAInfo, SDWIS, ICIS-NPDES, or Superfund Enterprise Management System (SEMS), or which are linked to a formal enforcement action in ICIS-FE&amp;C.</p>
+</blockquote>
+<p>CEMS uses the identifier from the EIA form 860 which is not in the FRS file at the ECHO data downloads (my understanding is that the ECHO FRS file only includes regulatory programs that are in other ECHO download files). The solution is to use the <a href="https://www.epa.gov/frs/epa-state-combined-csv-download-files">FRS flat file downloads</a>. If you did not know these files existed, don’t feel bad, I’ve had to point people to them numerous times!</p>
+<p>For convenience and speed, I’m going to look just at one state. The national combined files are at<br />
+<a href="https://ofmext.epa.gov/FLA/www3/state_files/national_combined.zip" class="uri">https://ofmext.epa.gov/FLA/www3/state_files/national_combined.zip</a></p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+temp &lt;- tempfile()
+download.file(&quot;https://ofmext.epa.gov/FLA/www3/state_files/state_combined_tx.zip&quot;,temp)
 
+unzip(temp, list = TRUE)</code></pre>
+<pre><code>
+                                                 Name    Length
+1                        TX_ALTERNATIVE_NAME_FILE.CSV  22091458
+2                                 TX_CONTACT_FILE.CSV  28940865
+3                  TX_ENVIRONMENTAL_INTEREST_FILE.CSV  56539833
+4                                TX_FACILITY_FILE.CSV 129689442
+5                         TX_MAILING_ADDRESS_FILE.CSV  21212504
+6                                   TX_NAICS_FILE.CSV  10462281
+7                            TX_ORGANIZATION_FILE.CSV  66343323
+8                                 TX_PROGRAM_FILE.CSV 161161367
+9                             TX_PROGRAM_GIS_FILE.CSV  31614995
+10                                    TX_SIC_FILE.CSV  14935318
+11                          TX_SUPP_INTEREST_FILE.CSV  59122565
+12 Facility State File Documentation 11132012_new.pdf   1020424
+                  Date
+1  2021-02-03 03:49:00
+2  2021-02-03 04:05:00
+3  2021-02-03 03:37:00
+4  2021-02-03 03:30:00
+5  2021-02-03 04:13:00
+6  2021-02-03 03:42:00
+7  2021-02-03 03:58:00
+8  2021-02-03 03:33:00
+9  2021-02-03 04:22:00
+10 2021-02-03 03:45:00
+11 2021-02-03 04:17:00
+12 2020-05-18 12:41:00</code></pre>
+</div>
+<p>What we actually need is the Environmental Interest file (there is a PDF if you need to look at the documentation).</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+env_interest &lt;- read_csv(unzip(temp, &quot;TX_ENVIRONMENTAL_INTEREST_FILE.CSV&quot;))
+
+
+spec(env_interest)</code></pre>
+<pre><code>
+cols(
+  REGISTRY_ID = col_double(),
+  PGM_SYS_ACRNM = col_character(),
+  PGM_SYS_ID = col_character(),
+  INTEREST_TYPE = col_character(),
+  FED_STATE_CODE = col_character(),
+  START_DATE = col_character(),
+  START_DATE_QUALIFIER = col_character(),
+  END_DATE = col_character(),
+  END_DATE_QUALIFIER = col_character(),
+  SOURCE_OF_DATA = col_character(),
+  LAST_REPORTED_DATE = col_character(),
+  CREATE_DATE = col_character(),
+  UPDATE_DATE = col_character(),
+  ACTIVE_STATUS = col_character()
+)</code></pre>
+</div>
+<p>I’m going to throw in a tip here. readr::read_csv shows how it decided to parse each column. Notice how REGISTRY_ID was read as double? That’s bad! REGISTRY_ID is an integer identifier and you want to make sure you don’t lose accuracy in digits. When using ECHO or other, similar data sets I <strong>STRONGLY</strong> recommend assigning column types when reading the data. With read_csv, this is accomplished by cutting and pasting the output from spec() and creating a list, then setting col_types to this list in read_csv.</p>
+<aside>
+This has bitten me in the past.
+</aside>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+coltypes &lt;- cols(
+  REGISTRY_ID = col_character(),
+  PGM_SYS_ACRNM = col_character(),
+  PGM_SYS_ID = col_character(),
+  INTEREST_TYPE = col_character(),
+  FED_STATE_CODE = col_character(),
+  START_DATE = col_character(),
+  START_DATE_QUALIFIER = col_character(),
+  END_DATE = col_character(),
+  END_DATE_QUALIFIER = col_character(),
+  SOURCE_OF_DATA = col_character(),
+  LAST_REPORTED_DATE = col_character(),
+  CREATE_DATE = col_character(),
+  UPDATE_DATE = col_character(),
+  ACTIVE_STATUS = col_character()
+)
+  
+env_interest &lt;- read_csv(unzip(temp, &quot;TX_ENVIRONMENTAL_INTEREST_FILE.CSV&quot;),
+                         col_types = coltypes)</code></pre>
+</div>
+<div class="layout-chunk" data-layout="l-body">
+
+</div>
+<p>Let’s take a quick look at the data</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+head(env_interest)</code></pre>
+<pre><code>
+# A tibble: 6 x 14
+  REGISTRY_ID PGM_SYS_ACRNM PGM_SYS_ID INTEREST_TYPE FED_STATE_CODE
+  &lt;chr&gt;       &lt;chr&gt;         &lt;chr&gt;      &lt;chr&gt;         &lt;chr&gt;         
+1 1100004559~ TRIS          75006CRGL~ TRI REPORTER  &lt;NA&gt;          
+2 1100004559~ NCDB          I06#19891~ COMPLIANCE A~ FEDERAL       
+3 1100004559~ TX-TCEQ ACR   RN1019959~ STATE MASTER  STATE         
+4 1100004559~ RCRAINFO      TXD099927~ CESQG         FEDERAL       
+5 1100004559~ NPDES         TXR05DZ60  ICIS-NPDES N~ FEDERAL       
+6 1100004559~ RCRAINFO      TXD099927~ UNSPECIFIED ~ FEDERAL       
+# ... with 9 more variables: START_DATE &lt;chr&gt;,
+#   START_DATE_QUALIFIER &lt;chr&gt;, END_DATE &lt;chr&gt;,
+#   END_DATE_QUALIFIER &lt;chr&gt;, SOURCE_OF_DATA &lt;chr&gt;,
+#   LAST_REPORTED_DATE &lt;chr&gt;, CREATE_DATE &lt;chr&gt;, UPDATE_DATE &lt;chr&gt;,
+#   ACTIVE_STATUS &lt;chr&gt;</code></pre>
+</div>
+<p>Relevant for our purposes here, REGISTRY_ID is the FRS identifier, PGM_SYS_ACRNM is the acronym for a regulatory program, PGM_SYS_ID is the facility identifier for that program.</p>
+<p>Doing a quick count shows that there are 41 different regulatory programs in the file!</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+env_interest %&gt;%
+  count(PGM_SYS_ACRNM) %&gt;%
+  arrange(desc(n))</code></pre>
+<pre><code>
+# A tibble: 41 x 2
+   PGM_SYS_ACRNM      n
+   &lt;chr&gt;          &lt;int&gt;
+ 1 TX-TCEQ ACR   165635
+ 2 NPDES         120956
+ 3 RCRAINFO       43410
+ 4 SFDW           33372
+ 5 ICIS           14859
+ 6 EIS             7892
+ 7 OSHA-OIS        6902
+ 8 AIR             6582
+ 9 AIRS/AFS        5501
+10 TRIS            4661
+# ... with 31 more rows</code></pre>
+</div>
+<p>Next step is to create two dataframes, one for each of the two system identifers we want, and then join them by the REGISTRY_ID.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre class="r"><code>
+air_df &lt;- env_interest %&gt;%
+  filter(PGM_SYS_ACRNM == &quot;AIR&quot;) %&gt;%
+  select(REGISTRY_ID, PGM_SYS_ACRNM, PGM_SYS_ID) %&gt;%
+  rename(air_id = PGM_SYS_ID)
+  
+cems_df &lt;- env_interest %&gt;%
+  filter(PGM_SYS_ACRNM == &quot;EIA-860&quot;) %&gt;%
+  select(REGISTRY_ID, PGM_SYS_ACRNM, PGM_SYS_ID) %&gt;%
+  rename(cems_id = PGM_SYS_ID)
+
+joined_df &lt;- full_join(air_df, cems_df, by = &quot;REGISTRY_ID&quot;)
+
+head(joined_df)</code></pre>
+<pre><code>
+# A tibble: 6 x 5
+  REGISTRY_ID  PGM_SYS_ACRNM.x air_id          PGM_SYS_ACRNM.y cems_id
+  &lt;chr&gt;        &lt;chr&gt;           &lt;chr&gt;           &lt;chr&gt;           &lt;chr&gt;  
+1 110000456042 AIR             TX000000481130~ &lt;NA&gt;            &lt;NA&gt;   
+2 110000456042 AIR             TX000000481210~ &lt;NA&gt;            &lt;NA&gt;   
+3 110000456079 AIR             TX000000481130~ &lt;NA&gt;            &lt;NA&gt;   
+4 110000456079 AIR             TX000000481130~ &lt;NA&gt;            &lt;NA&gt;   
+5 110000456088 AIR             TX000000480850~ &lt;NA&gt;            &lt;NA&gt;   
+6 110000456140 AIR             TX000000481130~ &lt;NA&gt;            &lt;NA&gt;   </code></pre>
+</div>
+<p>Although there are 660 CEMS identifiers in the joined data, only 188 of these have an associated ICIS-Air identifier. These are attached to 221 ICIS-Air identifiers.</p>
+<p>I’m afraid that I can’t explain why these numbers differ. One potential explanation is that ICIS-Air is a relatively new dataset (it’s predecessor, AFS, is frozen as of late 2014), so if a CEMS reporter stopped emitting prior to that date, it would not be in ICIS-Air. I nevertheless hope this is helpful.</p>
+<p>Please let me know if you have any questions!</p>
+<p><em>This work is not a product of the United States Government or the United States Environmental Protection Agency, and the author is not doing this work in any governmental capacity. The views expressed are those of the author only and do not necessarily represent those of the United States or the US EPA.</em></p>
+<p>Learn more about using Distill for R Markdown at <a href="https://rstudio.github.io/distill" class="uri">https://rstudio.github.io/distill</a>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>Data downloads are provided by EPA’s Clean Air Markets Division at <a href="https://ampd.epa.gov/ampd/" class="uri">https://ampd.epa.gov/ampd/</a>.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1371,12 +1172,7 @@ Research
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom">
-<h3 id="updates-and-corrections">Corrections</h3>
-<p>If you see mistakes or want to suggest changes, please <a href="https://github.com/willwheels/ww/issues/new">create an issue</a> on the source repository.</p>
-<h3 id="reuse">Reuse</h3>
-<p>Text and figures are licensed under Creative Commons Attribution <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Source code is available at <a href="https://github.com/willwheels/ww">https://github.com/willwheels/ww</a>, unless otherwise noted. The figures that have been reused from other sources don't fall under this license and can be recognized by a note in their caption: "Figure from ...".</p>
-</div>
+<div class="appendix-bottom"></div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

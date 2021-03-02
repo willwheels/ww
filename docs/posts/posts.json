@@ -1,7 +1,7 @@
 [
   {
-    "path": "posts/",
-    "title": "So You Want to Merge EPA Data Using the Federal Registry Service?",
+    "path": "posts/2021-03-02-so-you-want-to-merge-frs-data/",
+    "title": "So You Want to Merge FRS Data?",
     "description": "A quick blog post to describe merging ECHO data with FRS data.",
     "author": [
       {
@@ -11,8 +11,10 @@
     ],
     "date": "2021-03-02",
     "categories": [],
-    "preview": {},
-    "last_modified": "2021-03-02T07:27:22-05:00",
-    "input_file": {}
+    "preview": "posts/2021-03-02-so-you-want-to-merge-frs-data/so-you-want-to-merge-frs-data_files/figure-html5/tweet-from-ashley-1.png",
+    "last_modified": "2021-03-02T10:52:56-05:00",
+    "input_file": {},
+    "preview_width": 1100,
+    "preview_height": 474
   }
 ]
