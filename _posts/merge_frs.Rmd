@@ -1,0 +1,153 @@
+---
+title: "So You Want to Merge EPA Data Using the Federal Registry Service?"
+description: |
+  A quick blog post to describe merging ECHO data with FRS data.
+author:
+  - name: Will Wheeler
+    url: http://willwheels.rbind.io/
+    affiliation: U.S. EPA
+date: "`r Sys.Date()`"
+twitter:
+  creator: "@willwheels"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+```
+
+
+In the last week, I have received two similar questions about merging data from the [EPA ECHO Data Downloads](https://echo.epa.gov/tools/data-downloads). In this post, I try to answer one of these questions, posed by [Ashley Langer](https://www.ashleylanger.com/):
+
+```{r tweet-from-ashley, echo = FALSE}
+tweetrmd::tweet_screenshot("https://twitter.com/ProfALanger/status/1366124025349505025?s=20")
+```
+
+CEMS is the [Continuous Emissions Monitoring System](https://www.epa.gov/emc/emc-continuous-emission-monitoring-systems) data.^[Data downloads are provided by EPA's Clean Air Markets Division at https://ampd.epa.gov/ampd/.] These continuous monitors are generally used by facilities in air market trading programs, which depend on quite accurate data.
+
+The other data set is ICIS-Air, housed by ECHO, contains which "emissions, compliance, and enforcement data on stationary sources of air pollution." This data set focuses on the plant level. 
+
+Both of these data sets have their own facility identifiers, but the CEMS data does not contain a linking identifier (or at least, the data set under discussion does not). Common identifiers are provided by EPA's [Facility Registry Service](https://www.epa.gov/frs). It's important to note here that the common identifier may not be one-to-one, based on differing regulatory definitions and what FRS considers to be a facility.
+
+The ECHO data downloads have an FRS file, so what's the problem? This is not a complete copy of FRS. As noted in the download summary:
+
+>records included in the FRS download file are those with a valid FRS and which are cross-referenced by ID number to data contained in ICIS-Air, TRI, GHG (E-GGRT), RCRAInfo, SDWIS, ICIS-NPDES, or Superfund Enterprise Management System (SEMS), or which are linked to a formal enforcement action in ICIS-FE&C.
+
+ CEMS uses the identifier from the EIA form 860 which is not in the FRS file at the ECHO data downloads (my understanding is that the ECHO FRS file only includes regulatory programs that are in other ECHO download files). The solution is to use the [FRS flat file downloads](https://www.epa.gov/frs/epa-state-combined-csv-download-files). If you did not know these files existed, don't feel bad, I've had to point people to them numerous times!
+
+ For convenience and speed, I'm going to look just at one state. 
+ The national combined files are at  
+ https://ofmext.epa.gov/FLA/www3/state_files/national_combined.zip
+
+```{r look-at-FRS}
+
+
+temp <- tempfile()
+download.file("https://ofmext.epa.gov/FLA/www3/state_files/state_combined_tx.zip",temp)
+
+unzip(temp, list = TRUE)
+
+```
+
+What we actually need is the Environmental Interest file (there is a PDF if you need to look at the documentation).
+
+```{r env-interest-file, echo=TRUE}
+
+env_interest <- read_csv(unzip(temp, "TX_ENVIRONMENTAL_INTEREST_FILE.CSV"))
+
+
+spec(env_interest)
+```
+
+I'm going to throw in a tip here. readr::read_csv shows how it decided to parse each column. Notice how REGISTRY_ID was read as double? That's bad! REGISTRY_ID is an integer identifier and you want to make sure you don't lose accuracy in digits. When using ECHO or other, similar data sets I __STRONGLY__ recommend assigning column types when reading the data. With read_csv, this is accomplished by cutting and pasting the output from spec() and creating a list, then setting col_types to this list in read_csv. 
+
+<aside> This has bitten me in the past. </aside>
+
+```{r read-spec-cols}
+
+coltypes <- cols(
+  REGISTRY_ID = col_character(),
+  PGM_SYS_ACRNM = col_character(),
+  PGM_SYS_ID = col_character(),
+  INTEREST_TYPE = col_character(),
+  FED_STATE_CODE = col_character(),
+  START_DATE = col_character(),
+  START_DATE_QUALIFIER = col_character(),
+  END_DATE = col_character(),
+  END_DATE_QUALIFIER = col_character(),
+  SOURCE_OF_DATA = col_character(),
+  LAST_REPORTED_DATE = col_character(),
+  CREATE_DATE = col_character(),
+  UPDATE_DATE = col_character(),
+  ACTIVE_STATUS = col_character()
+)
+  
+env_interest <- read_csv(unzip(temp, "TX_ENVIRONMENTAL_INTEREST_FILE.CSV"),
+                         col_types = coltypes)
+
+
+```
+
+```{r unlink temp file,echo=FALSE}
+
+# once you're sure you've got the data you need
+
+unlink(temp)
+
+```
+
+Let's take a quick look at the data
+
+```{r head}
+
+head(env_interest)
+
+```
+Relevant for our purposes here, REGISTRY_ID is the FRS identifier, PGM_SYS_ACRNM is the acronym for a regulatory program, PGM_SYS_ID is the facility identifier for that program. 
+
+Doing a quick count shows that there are 41 different regulatory programs in the file!
+
+```{r pgm_sys_acrnms}
+
+env_interest %>%
+  count(PGM_SYS_ACRNM) %>%
+  arrange(desc(n))
+
+```
+
+Next step is to create two dataframes, one for each of the two system identifers we want, and then join them by the REGISTRY_ID.
+
+```{r joins}
+
+air_df <- env_interest %>%
+  filter(PGM_SYS_ACRNM == "AIR") %>%
+  select(REGISTRY_ID, PGM_SYS_ACRNM, PGM_SYS_ID) %>%
+  rename(air_id = PGM_SYS_ID)
+  
+cems_df <- env_interest %>%
+  filter(PGM_SYS_ACRNM == "EIA-860") %>%
+  select(REGISTRY_ID, PGM_SYS_ACRNM, PGM_SYS_ID) %>%
+  rename(cems_id = PGM_SYS_ID)
+
+joined_df <- full_join(air_df, cems_df, by = "REGISTRY_ID")
+
+head(joined_df)
+```
+
+
+Although there are `r length(unique(joined_df$cems_id))` CEMS identifiers in the joined data, only `r joined_df %>% filter(!is.na(cems_id), !is.na(air_id)) %>% select(cems_id) %>% distinct() %>% nrow()` of these have an associated ICIS-Air identifier. These are attached to `r joined_df %>% filter(!is.na(cems_id), !is.na(air_id)) %>% select(air_id) %>% distinct() %>% nrow()` ICIS-Air identifiers.
+
+I'm afraid that I can't explain why these numbers differ. One potential explanation is that ICIS-Air is a relatively new dataset (it's predecessor, AFS, is frozen as of late 2014), so if a CEMS reporter stopped emitting prior to that date, it would not be in ICIS-Air. I nevertheless hope this is helpful. 
+
+Please let me know if you have any questions!
+
+_This work is not a product of the United States Government or the United States Environmental Protection Agency, and the author is not doing this work in any governmental capacity.  The views expressed are those of the author only and do not necessarily represent those of the United States or the US EPA._
+
+Learn more about using Distill for R Markdown at <https://rstudio.github.io/distill>.
+
+
+
+
+

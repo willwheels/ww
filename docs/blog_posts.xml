@@ -11,6 +11,14 @@
       <link>https://https://willwheels.rbind.io/</link>
     </image>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 23 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>So You Want to Merge EPA Data Using the Federal Registry Service?</title>
+      <dc:creator>Will Wheeler</dc:creator>
+      <link>https://https://willwheels.rbind.io/posts</link>
+      <description>A quick blog post to describe merging ECHO data with FRS data.</description>
+      <guid>https://https://willwheels.rbind.io/posts</guid>
+      <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+    </item>
   </channel>
 </rss>
