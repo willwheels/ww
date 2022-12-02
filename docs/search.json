@@ -1,0 +1,48 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-02T18:43:00-05:00"
+    },
+    {
+      "path": "blog_posts.html",
+      "title": "Blog Posts",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-02T18:43:04-05:00"
+    },
+    {
+      "path": "CV.html",
+      "title": "CV",
+      "author": [],
+      "contents": "\r\nMy current CV is here\r\nMy CV is written in Rmarkdown and generated using a slightly modified\r\nversion of a LaTex template created by Ryan\r\nPeek, which is in turn based on a template by Steven\r\nMiller.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-02T18:43:07-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Will's 'Academic' Website",
+      "author": [],
+      "contents": "\r\n\r\n\r\n\r\nGreetings. I am an environmental economist at the U.S. EPA’s National Center for\r\nEnvironmental Economics. I mostly support efforts (and thus conduct\r\nresearch regarding) water quality and enforcement issues. I am quite\r\ninterested in the quality of EPA’s environmental data and do my best to\r\nhelp people understand our data sets. I also study the potential for\r\ngaming of environmental data. We do not maintain personal websites at\r\nwork, so this is what I am creating instead.\r\nI am an occasional blogger at John Whitehead and Tim Haab’s Environmental Economics but I intend to blog\r\non this space using Distill and Rmarkdown to show examples of the kind\r\nof work I do.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-02T18:43:09-05:00"
+    },
+    {
+      "path": "publications.html",
+      "title": "Publications",
+      "author": [],
+      "contents": "\r\nThis will be my publications\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-02T18:43:11-05:00"
+    },
+    {
+      "path": "work_in_progress.html",
+      "title": "Ongoing Research",
+      "author": [],
+      "contents": "\r\nHere I’ll have works in progress\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-12-02T18:43:13-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
